@@ -10,8 +10,13 @@
     <div class="bg-zinc-700 w-96 shadow-xl rounded-2xl p-5">
       <h1 class="text-3xl font-medium text-center">Đăng nhập</h1>
       <form class="space-y-5 mt-5 text-black" id="login-form" method="POST" action="/login">
-        <input type="text" class="w-full h-12 border border-gray-800 rounded px-3" placeholder="E-mail" name="email"/>
-        <input type="password" class="w-full h-12 border-gray-800 rounded px-3"  placeholder="Mật khẩu" name="password"/>
+        <% if (inputData.errorMessage) { %>
+          <div class="bg-red-200 w-full rounded">
+            <p class="px-2 py-1 text-red-700 font-bold text-md"><%= inputData.errorMessage %></p>
+          </div>
+        <% } %>
+        <input type="text" class="w-full h-12 border border-gray-800 rounded px-3" placeholder="E-mail" name="email" value="<%= inputData.email %>" required/>
+        <input type="password" class="w-full h-12 border-gray-800 rounded px-3"  placeholder="Mật khẩu" name="password" value="<%= inputData.password %>" minlength="6" required/>
         <p class="text-primaryRed hover:text-secondaryRed font-medium text-right cursor-pointer">Quên mật khẩu ?</p> 
         <button class="text-center w-full bg-secondaryRed hover:bg-primaryRed rounded-full text-white py-3 font-medium">Đăng nhập</button>
       </form>
