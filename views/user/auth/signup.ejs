@@ -1,0 +1,23 @@
+<%- include('../../shared/includes/head', { pageTitle: 'Đăng ký'}) %>
+</head>
+<body class="h-screen bg-zinc-800 flex flex-col space-y-10 justify-center items-center text-white">
+    <!-- logo -->
+   <div class=" flex w-96 ">
+      <img src="/img/logo-dark.svg" alt="">
+   </div>
+  
+    <!-- Form  -->
+    <div class="bg-zinc-700 w-96 shadow-xl rounded-2xl p-5">
+      <h1 class="text-3xl font-medium">Đăng ký</h1>
+      <p class="text-sm">Đăng ký để bắt đầu mua sắm và nhận ưu đãi</p>
+      <form class="space-y-5 mt-5 text-black" id="signup-form" method="POST" action="/signup">
+        <input type="text" class="w-full h-12 border border-gray-800 rounded px-3" placeholder="Họ và tên" id = "name" name="name"/>
+        <input type="text" class="w-full h-12 border border-gray-800 rounded px-3" placeholder="E-mail" id = "email" name="email"/>
+        <input type="password" class="w-full h-12 border-gray-800 rounded px-3"  placeholder="Mật khẩu" id = "password" name="password"/>  
+        <input type="password" class="w-full h-12 border-gray-800 rounded px-3" placeholder="Nhập lại mật khẩu" id = "password-confirm" name="password-confirm">
+        <button class="text-center w-full bg-secondaryRed hover:bg-primaryRed rounded-full text-white py-3 font-medium">Đăng ký ngay</button>
+      </form>
+    </div>
+    <p>Đã có tài khoản? <a href="/login" class="text-primaryRed hover:text-secondaryRed font-medium">Đăng nhập</a></p>
+  </div>
+</body>

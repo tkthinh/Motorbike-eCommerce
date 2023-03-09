@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hero {
+  width: 100%;
+  background-image: url("/img/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@layer base {
+  h2 {
+    @apply text-center text-5xl pb-20;
+  }
+  h4 {
+    @apply absolute bottom-2 right-2 z-10 uppercase px-4 text-right text-4xl font-extralight text-white duration-200 group-hover:scale-110 group-hover:text-black;
+  }
+}
+
+@layer components {
+  .item {
+    @apply relative overflow-hidden md:w-1/2;
+  }
+
+  .item-gradient {
+    @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
+  }
+}
+
+footer a:hover{
+  @apply text-primaryRed;
+}
+
+.ficon:hover{
+  filter: invert(37%) sepia(61%) saturate(6163%) hue-rotate(343deg) brightness(95%) contrast(111%);
+}

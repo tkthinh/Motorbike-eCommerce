@@ -1,0 +1,244 @@
+<%- include('../../shared/includes/head', { pageTitle: 'Đăng ký'}) %>
+</head>
+  <body class="bg-primaryBg font-sans font-bold">
+    <main>
+      <section id="hero" class="w-full h-screen relative mb-24">
+        <nav class="container relative mx-auto py-3 text-white">
+          <div class="flex items-center justify-between">
+            <!-- Logo  -->
+            <div class="z-30 w-48"><img src="/img/logo-dark.svg" /></div>
+            <!-- Mid menu  -->
+            <div class="flex justify-around space-x-10 text-xl">
+              <a
+                href="#"
+                class="px-4 py-2 rounded-3xl hover:bg-slate-300 hover:bg-opacity-50"
+                >Xe số</a
+              >
+              <a
+                href="#"
+                class="px-4 py-2 rounded-3xl hover:bg-slate-300 hover:bg-opacity-50"
+                >Xe tay ga</a
+              >
+              <a
+                href="#"
+                class="px-4 py-2 rounded-3xl hover:bg-slate-300 hover:bg-opacity-50"
+                >Xe tay côn</a
+              >
+              <a
+                href="#"
+                class="px-4 py-2 rounded-3xl hover:bg-slate-300 hover:bg-opacity-50"
+                >Phân khối lớn</a
+              >
+            </div>
+            <!-- Right menu  -->
+            <div class="flex justify-between space-x-2">
+              <a
+                href="#"
+                class="w-14 rounded-full hover:bg-slate-300 hover:bg-opacity-50"
+                ><img src="/img/magnifier-dark.svg"
+              /></a>
+              <a
+              href="/cart"
+              class="w-14 rounded-full hover:bg-slate-300 hover:bg-opacity-50"
+              ><img src="/img/cart-dark.svg"
+              /></a>
+              <% if (locals.isAuth) { %>
+                <form action="/logout" method="POST"
+                  class="w-14 rounded-full hover:bg-slate-300 hover:bg-opacity-50 cursor-pointer"
+                  >
+                  <button><img src="img/logout-dark.svg"/></button>
+                </form>
+                <% } else { %>
+                  <a
+                    href="/signup"
+                    class="w-14 rounded-full hover:bg-slate-300 hover:bg-opacity-50"
+                    ><img src="img/user-dark.svg"
+                  /></a>
+                <% } %>
+            </div>
+          </div>
+        </nav>
+        <!--@todo mobile menu  -->
+
+        <div
+          class="absolute bottom-40 left-20 max-w-lg text-center text-white uppercase text-6xl font-extralight p-4 border-4 border-white"
+        >
+          <p>The <span class="font-bold">best bikes</span></p>
+          <p>for the</p>
+          <p class="font-bold">best riders</p>
+        </div>
+      </section>
+
+      <section id="features" class="pb-24">
+        <h2>Vì sao chọn HEADtown?</h2>
+        <!-- Features Container  -->
+        <div
+          class="relative container flex flex-col items-start px-6 mx-auto md:flex-row md:space-x-7"
+        >
+          <!-- Horizontal Line -->
+          <div
+            class="hidden absolute top-24 w-10/12 left-16 h-3 bg-primaryRed md:block"
+          ></div>
+          <!-- Vertical Line -->
+          <div class="absolute w-2 left-1/2 h-full -ml-1 bg-primaryRed md:hidden"></div>
+  
+          <!-- Box 1 -->
+          <div
+            class="relative flex flex-col p-6 space-y-6 bg-white rounded-lg md:w-1/3"
+          >
+            <!-- Image Positioning -->
+            <div class="absolute -ml-10 left-1/2 -top-10 md:left-16">
+              <!-- Image Container For Background & Center -->
+              <div
+                class="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-darkBlue"
+              >
+                <img src="/img/warranty.svg" alt="" />
+              </div>
+            </div>
+            <h5
+              class="pt-6 text-xl font-bold text-center capitalize md:text-left"
+            >
+              Chính hãng Honda
+            </h5>
+            <p class="text-center text-gray-400 md:text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime, porro voluptatibus totam voluptate dolorem adipisci quas earum.
+            </p>
+          </div>
+  
+          <!-- Box 2 -->
+          <div
+            class="relative flex flex-col mt-24 p-6 space-y-6 bg-white rounded-lg md:mt-8 md:w-1/3"
+          >
+            <!-- Image Positioning -->
+            <div class="absolute -ml-10 left-1/2 -top-10 md:left-16">
+              <!-- Image Container For Background & Center -->
+              <div
+                class="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-darkBlue"
+              >
+                <img src="/img/repair.svg" alt="" />
+              </div>
+            </div>
+            <h5
+              class="pt-6 text-xl font-bold text-center capitalize md:text-left"
+            >
+              Bảo hành chuyên nghiệp
+            </h5>
+            <p class="text-center text-gray-400 md:text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, qui aliquam officiis omnis eius itaque iste.
+            </p>
+          </div>
+  
+          <!-- Box 3 -->
+          <div
+            class="relative flex flex-col mt-24 p-6 space-y-6 bg-white rounded-lg md:mt-16 md:w-1/3"
+          >
+            <!-- Image Positioning -->
+            <div class="absolute -ml-10 left-1/2 -top-10 md:left-16">
+              <!-- Image Container For Background & Center -->
+              <div
+                class="flex items-center justify-center w-20 h-20 p-4 rounded-full bg-darkBlue"
+              >
+                <img src="/img/service.svg" alt="" />
+              </div>
+            </div>
+            <h5
+              class="pt-6 text-xl font-bold text-center capitalize md:text-left"
+            >
+              Dịch vụ hậu mãi
+            </h5>
+            <p class="text-center text-gray-400 md:text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse, odio consequuntur deleniti reprehenderit suscipit amet nam magnam velit saepe.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="cta" class="px-16 mx-auto pb-12">
+        <h2>CÁC DÒNG XE</h2>
+        <div class=" container flex flex-col space-y-8">
+          <!-- ITEM CONTAINER  -->
+          <div class="container flex flex-row space-x-2">
+            <!-- ITEM  -->
+            <div class="group item">
+              <!-- Desktop Image -->
+              <img
+                src="/img/wave.png"
+                alt=""
+                class="hidden w-full duration-200 md:block group-hover:scale-110"
+              />
+              <!-- Mobile Image -->
+              <img
+                src="images/mobile/image-deep-earth.jpg"
+                alt=""
+                class="w-full md:hidden"
+              />
+              <!-- Item Gradient -->
+              <div class="item-gradient"></div>
+              <!-- Item Text -->
+              <h4>Xe số</h4>
+            </div>
+            <!-- ITEM  -->
+            <div class="group item">
+              <!-- Desktop Image -->
+              <img
+                src="/img/sh.png"
+                alt=""
+                class="hidden w-full duration-200 md:block group-hover:scale-110"
+              />
+              <!-- Mobile Image -->
+              <img
+                src="images/mobile/image-deep-earth.jpg"
+                alt=""
+                class="w-full md:hidden"
+              />
+              <!-- Item Gradient -->
+              <div class="item-gradient"></div>
+              <!-- Item Text -->
+              <h4>Xe tay ga</h4>
+            </div>
+          </div>
+
+          <!-- ITEM CONTAINER  -->
+          <div class="container flex flex-row space-x-2">
+            <!-- ITEM  -->
+            <div class="group item">
+              <!-- Desktop Image -->
+              <img
+                src="/img/winner.png"
+                alt=""
+                class="hidden w-full duration-200 md:block group-hover:scale-110"
+              />
+              <!-- Mobile Image -->
+              <img
+                src="images/mobile/image-deep-earth.jpg"
+                alt=""
+                class="w-full md:hidden"
+              />
+              <!-- Item Gradient -->
+              <div class="item-gradient"></div>
+              <!-- Item Text -->
+              <h4>Xe tay côn</h4>
+            </div>
+            <!-- ITEM  -->
+            <div class="group item">
+              <!-- Desktop Image -->
+              <img
+                src="/img/cbr.png"
+                alt=""
+                class="hidden w-full duration-200 md:block group-hover:scale-110"
+              />
+              <!-- Mobile Image -->
+              <img
+                src="images/mobile/image-deep-earth.jpg"
+                alt=""
+                class="w-full md:hidden"
+              />
+              <!-- Item Gradient -->
+              <div class="item-gradient"></div>
+              <!-- Item Text -->
+              <h4 class="">Phân khối lớn</h4>
+            </div>  
+          </div>
+        </div>
+      </section>
+    </main>
+<%- include('../../shared/includes/footer') %>
